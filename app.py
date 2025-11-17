@@ -28,5 +28,9 @@ def patient():
 def doctor():
      return render_template("doctor_dashboard.html")
     
+@app.route("/add_doctor")
+def add_doctor():
+     return render_template("add_doctor.html")
+ 
 if __name__ == "__main__":
     app.run(debug=True)

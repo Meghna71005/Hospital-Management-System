@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Dahboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}    ">
+</head>
+<body>
+    
+
+<div class="dashboard">
+  <header>
+    <img src="static/img/logo.png" alt=" Logo" class="admin-logo" />
+    <h1>Welcome Admin!</h1>
+     <form class="search-bar">
+      <input type="text" placeholder="Search doctor, patient, dept...">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+  <section class="card doctors">
+  <div class="section-row">
+    
+    <h2>Registered Doctors</h2>
+    <a class="create" href="{{ url_for('add_doctor') }}">create</a>
+    <!--<button class="create" href="{{url_for('static', filename='add_doctor')}}">create</button>-->
+  </div>
+  <div class="doctor-list">
+    <div class="person-card">
+      <span>Dr. Meena</span>
+      <div class="button-row">
+        <button class="edit">edit</button>
+        <button class="delete">delete</button>
+        <button class="blacklist">blacklist</button>
+      </div>
+    </div>
+    <div class="person-card">
+      <span>Dr. Shyam</span>
+      <div class="button-row">
+        <button class="edit">edit</button>
+        <button class="delete">delete</button>
+        <button class="blacklist">blacklist</button>
+      </div>
+    </div>
+    <div class="person-card">
+      <span>Dr. Ram</span>
+      <div class="button-row">
+        <button class="edit">edit</button>
+        <button class="delete">delete</button>
+        <button class="blacklist">blacklist</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card patients">
+  <h2>Registered Patients</h2>
+  <div class="doctor-list">
+    <div class="person-card">
+      <span>Mr. Raj</span>
+      <div class="button-row">
+        <button class="edit">edit</button>
+        <button class="delete">delete</button>
+        <button class="blacklist">blacklist</button>
+      </div>
+    </div>
+    <div class="person-card">
+      <span>Miss Siya</span>
+      <div class="button-row">
+        <button class="edit">edit</button>
+        <button class="delete">delete</button>
+        <button class="blacklist">blacklist</button>
+      </div>
+    </div>
+    <div class="person-card">
+      <span>Miss Kajol</span>
+      <div class="button-row">
+        <button class="edit">edit</button>
+        <button class="delete">delete</button>
+        <button class="blacklist">blacklist</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Repeat for Patients -->
+  <section class="card appointments">
+    <h2>Upcoming Appointments</h2>
+    <table>
+      <tr>
+        <th>Sr No.</th><th>Patient Name</th><th>Doctor Name</th><th>Department</th><th>Patient-History</th>
+      </tr>
+      <tr>
+        <td>1001</td>
+        <td>Mr. Raj</td>
+        <td>Dr. Meena</td>
+        <td>Cardiology</td>
+        <td><button class="view"><i class="icon-history"></i> View</button></td>
+      </tr>
+    </table>
+  </section>
+</div>
+</body>
+</html>
